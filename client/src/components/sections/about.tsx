@@ -88,8 +88,8 @@ const About = () => {
             variants={imageVariants}
           >
             <img
-              src="/assets/about.jpg"
-              alt="Luxury barbershop interior"
+              src="/@assets/Screenshot 2025-08-02 at 1.04.01 PM_1754157889780.png"
+              alt="Kut'n Up Barber Shop storefront"
               className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
               onError={(e) => {
                 // Fallback to placeholder if image doesn't exist
