@@ -88,9 +88,13 @@ const About = () => {
             variants={imageVariants}
           >
             <img
-              src="./images/Screenshot 2025-08-02 at 1.04.01 PM_1754157889780.png"
+              src="/attached_assets/Screenshot 2025-08-02 at 1.04.01 PM_1754157889780.png"
               alt="Kut'n Up Barber Shop storefront"
               className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
+              onError={(e) => {
+                // Fallback to placeholder if image doesn't exist
+                e.currentTarget.src = "https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600";
+              }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </motion.div>
