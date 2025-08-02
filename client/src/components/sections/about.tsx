@@ -88,7 +88,7 @@ const About = () => {
             variants={imageVariants}
           >
             <img
-              src="/attached_assets/Screenshot 2025-08-02 at 1.04.01 PM_1754157889780.png"
+              src={`/attached_assets/Screenshot 2025-08-02 at 1.04.01 PM_1754157889780.png?t=${Date.now()}`}
               alt="Kut'n Up Barber Shop storefront"
               className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
               onError={(e) => {
@@ -108,7 +108,7 @@ const About = () => {
             >
               ABOUT{" "}
               <motion.span
-                className="font-bold block"
+                className="font-bold block bg-gradient-to-r from-black via-blue-600 to-black bg-clip-text text-transparent"
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}

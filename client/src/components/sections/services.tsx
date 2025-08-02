@@ -127,7 +127,7 @@ const Services = () => {
         >
           <h2 className="text-5xl font-light text-black mb-6 leading-tight">
             OUR{" "}
-            <span className="font-bold">SERVICES</span>
+            <span className="font-bold bg-gradient-to-r from-black via-blue-600 to-black bg-clip-text text-transparent">SERVICES</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Experience premium grooming services tailored to your unique style and preferences

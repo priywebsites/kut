@@ -40,8 +40,8 @@ const ServiceCard = ({
     <motion.div
       className={`p-8 rounded-2xl shadow-lg transition-all duration-500 group cursor-pointer animate-morphing ${
         featured
-          ? "bg-black text-white ring-2 ring-gray-300"
-          : "bg-white text-black border border-gray-100 hover:shadow-2xl"
+          ? "bg-black text-white ring-2 ring-blue-400"
+          : "bg-white text-black border border-gray-100 hover:border-blue-200 hover:shadow-2xl"
       }`}
       variants={cardVariants}
       initial="hidden"
@@ -82,9 +82,9 @@ const ServiceCard = ({
         viewport={{ once: true }}
       >
         <div className={`inline-flex p-4 rounded-2xl ${
-          featured ? "bg-white/10" : "bg-gray-100"
+          featured ? "bg-white/10" : "bg-gradient-to-br from-gray-100 to-blue-50"
         } group-hover:scale-110 transition-transform duration-300`}>
-          <Icon size={32} className={featured ? "text-white" : "text-black"} />
+          <Icon size={32} className={featured ? "text-white" : "text-blue-900"} />
         </div>
       </motion.div>
 

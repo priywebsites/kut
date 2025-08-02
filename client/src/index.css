@@ -19,12 +19,15 @@
   --primary-foreground: hsl(0, 0%, 100%);
   --secondary: hsl(0, 0%, 96%);
   --secondary-foreground: hsl(0, 0%, 9%);
-  --accent: hsl(0, 0%, 96%);
-  --accent-foreground: hsl(0, 0%, 9%);
+  --accent: hsl(214, 84%, 56%);
+  --accent-foreground: hsl(0, 0%, 98%);
   --destructive: hsl(0, 84%, 60%);
   --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(0, 0%, 0%);
+  --ring: hsl(214, 84%, 56%);
   --radius: 0.75rem;
+  --blue-accent: hsl(214, 84%, 56%);
+  --blue-accent-light: hsl(214, 84%, 85%);
+  --blue-accent-dark: hsl(214, 84%, 35%);
 }
 
 .dark {

@@ -117,7 +117,7 @@ const Hero = () => {
           transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
         >
           <motion.div
-            className="absolute -top-2 -left-2 w-4 h-4 bg-black rounded-full"
+            className="absolute -top-2 -left-2 w-4 h-4 bg-blue-600 rounded-full"
             animate={{
               scale: [1, 1.5, 1],
               opacity: [0.3, 0.8, 0.3],

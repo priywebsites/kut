@@ -8,24 +8,25 @@ const Work = () => {
   const { ref, controls } = useScrollAnimation();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
+  const timestamp = Date.now();
   const workImages = [
     {
-      src: "/attached_assets/Screenshot 2025-08-02 at 12.56.21 PM_1754157527921.png",
+      src: `/attached_assets/Screenshot 2025-08-02 at 12.56.21 PM_1754157527921.png?t=${timestamp}`,
       alt: "Perfect fade with precision lineup",
       fallback: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500"
     },
     {
-      src: "/attached_assets/Screenshot 2025-08-02 at 12.57.15 PM_1754157527922.png",
+      src: `/attached_assets/Screenshot 2025-08-02 at 12.57.15 PM_1754157527922.png?t=${timestamp}`,
       alt: "Modern textured cut with beard styling",
       fallback: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500"
     },
     {
-      src: "/attached_assets/Screenshot 2025-08-02 at 12.57.50 PM_1754157527922.png",
+      src: `/attached_assets/Screenshot 2025-08-02 at 12.57.50 PM_1754157527922.png?t=${timestamp}`,
       alt: "Classic taper fade with sharp lineup",
       fallback: "https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500"
     },
     {
-      src: "/attached_assets/Screenshot 2025-08-02 at 12.58.07 PM_1754157527923.png",
+      src: `/attached_assets/Screenshot 2025-08-02 at 12.58.07 PM_1754157527923.png?t=${timestamp}`,
       alt: "Skin fade with professional beard trim",
       fallback: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500"
     }
@@ -107,7 +108,7 @@ const Work = () => {
         >
           <h2 className="text-5xl font-light text-black mb-6 leading-tight">
             OUR{" "}
-            <span className="font-bold">WORK</span>
+            <span className="font-bold bg-gradient-to-r from-black via-blue-600 to-black bg-clip-text text-transparent">WORK</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             See the artistry and craftsmanship in action through our portfolio of premium cuts and styles
@@ -184,7 +185,7 @@ const Work = () => {
 
               {/* Animated border */}
               <motion.div
-                className="absolute inset-0 border-2 border-white/30 rounded-2xl"
+                className="absolute inset-0 border-2 border-blue-500/50 rounded-2xl"
                 initial={{ scale: 1, opacity: 0 }}
                 animate={{ 
                   scale: hoveredIndex === index ? 0.95 : 1,
