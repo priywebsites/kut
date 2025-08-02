@@ -78,7 +78,7 @@ const Hero = () => {
         />
 
         <motion.div
-          className="absolute bottom-1/4 left-1/3 w-6 h-6 bg-gradient-to-bl from-gray-200 to-gray-500"
+          className="absolute bottom-1/4 left-1/3 w-6 h-6 bg-gradient-to-bl from-blue-400 to-blue-800"
           style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}
           animate={{
             y: [0, -25, 10, -30, 0],
@@ -95,7 +95,7 @@ const Hero = () => {
         />
 
         <motion.div
-          className="absolute top-2/3 right-1/4 w-4 h-16 bg-gradient-to-t from-gray-300 to-gray-600 rounded-full animate-bounce-subtle"
+          className="absolute top-2/3 right-1/4 w-4 h-16 bg-gradient-to-t from-blue-500 to-blue-800 rounded-full animate-bounce-subtle"
           animate={{
             y: [0, -35, 25, -15, 0],
             x: [0, -30, 20, -5, 0],
@@ -136,7 +136,7 @@ const Hero = () => {
           transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
         >
           <motion.div
-            className="absolute -bottom-2 -right-2 w-3 h-3 bg-gray-400 rounded-full"
+            className="absolute -bottom-2 -right-2 w-3 h-3 bg-blue-500 rounded-full"
             animate={{
               scale: [1, 2, 1],
               opacity: [0.2, 0.7, 0.2],
@@ -154,7 +154,7 @@ const Hero = () => {
         {[...Array(12)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-gray-400 rounded-full"
+            className={`absolute w-1 h-1 rounded-full ${i % 3 === 0 ? 'bg-blue-500' : 'bg-gray-400'}`}
             style={{
               top: `${20 + (i * 7)}%`,
               left: `${10 + (i * 8)}%`,
@@ -185,7 +185,7 @@ const Hero = () => {
           variants={itemVariants}
         >
           <motion.span
-            className="gradient-text-animated inline-block"
+            className="bg-gradient-to-r from-black via-blue-600 to-black bg-clip-text text-transparent inline-block"
             animate={{
               y: [0, -5, 0],
               scale: [1, 1.02, 1],
@@ -199,7 +199,7 @@ const Hero = () => {
             PRECISION
           </motion.span>
           <motion.span
-            className="block font-bold gradient-text-animated"
+            className="block font-bold bg-gradient-to-r from-black via-blue-600 to-black bg-clip-text text-transparent"
             initial={{ opacity: 0, scale: 0.8, rotateX: -90 }}
             animate={{ 
               opacity: 1, 
@@ -278,7 +278,7 @@ const Hero = () => {
         transition={{ delay: 1.5 }}
       >
         <motion.div
-          className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center"
+          className="w-6 h-10 border-2 border-blue-500 rounded-full flex justify-center"
           animate={{ y: [0, 5, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >

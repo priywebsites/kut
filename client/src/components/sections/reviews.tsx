@@ -60,7 +60,7 @@ const Reviews = () => {
         {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-3 h-3 bg-gray-500 rounded-full"
+            className={`absolute w-3 h-3 rounded-full ${i % 2 === 0 ? 'bg-blue-500' : 'bg-gray-500'}`}
             style={{
               top: `${20 + i * 15}%`,
               left: `${10 + i * 15}%`,

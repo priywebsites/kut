@@ -82,7 +82,7 @@ const TestimonialCard = ({
               transition={{ delay: index * 0.2 + 0.3 + i * 0.1 }}
               viewport={{ once: true }}
             >
-              <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+              <Star className="w-5 h-5 fill-blue-500 text-blue-500" />
             </motion.div>
           ))}
         </div>
@@ -107,7 +107,7 @@ const TestimonialCard = ({
         viewport={{ once: true }}
       >
         <motion.div
-          className="w-12 h-12 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full flex items-center justify-center text-white font-bold mr-4 group-hover:scale-110 transition-transform duration-300"
+          className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-800 rounded-full flex items-center justify-center text-white font-bold mr-4 group-hover:scale-110 transition-transform duration-300"
           whileHover={{ rotate: 5 }}
         >
           {initials}
