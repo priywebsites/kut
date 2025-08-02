@@ -4,14 +4,18 @@
   "installCommand": "npm install",
   "framework": "vite",
   "functions": {
-    "server/index.ts": {
-      "runtime": "nodejs18.x"
+    "dist/index.js": {
+      "runtime": "nodejs20.x"
     }
   },
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/server/index.ts"
+      "destination": "/dist/index.js"
+    },
+    {
+      "source": "/attached_assets/(.*)",
+      "destination": "/attached_assets/$1"
     },
     {
       "source": "/(.*)",
