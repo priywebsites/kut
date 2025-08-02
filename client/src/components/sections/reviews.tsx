@@ -54,7 +54,31 @@ const Reviews = () => {
   };
 
   return (
-    <section id="reviews" className="py-24 bg-gray-50" ref={ref}>
+    <section id="reviews" className="py-24 ultra-gradient relative overflow-hidden" ref={ref}>
+      {/* Dynamic Background Patterns */}
+      <div className="absolute inset-0 opacity-10">
+        {[...Array(6)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-3 h-3 bg-gray-500 rounded-full"
+            style={{
+              top: `${20 + i * 15}%`,
+              left: `${10 + i * 15}%`,
+            }}
+            animate={{
+              scale: [0, 1.5, 0],
+              opacity: [0, 0.8, 0],
+              rotate: [0, 180, 360],
+            }}
+            transition={{
+              duration: 5 + i * 0.5,
+              repeat: Infinity,
+              delay: i * 0.8,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-20"

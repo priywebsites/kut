@@ -38,7 +38,7 @@ const ServiceCard = ({
 
   return (
     <motion.div
-      className={`p-8 rounded-2xl shadow-lg transition-all duration-500 group cursor-pointer ${
+      className={`p-8 rounded-2xl shadow-lg transition-all duration-500 group cursor-pointer animate-morphing ${
         featured
           ? "bg-black text-white ring-2 ring-gray-300"
           : "bg-white text-black border border-gray-100 hover:shadow-2xl"
@@ -48,8 +48,30 @@ const ServiceCard = ({
       whileInView="visible"
       viewport={{ once: true }}
       whileHover={{ 
-        y: -8,
+        y: -15,
+        scale: 1.05,
+        rotateY: 5,
+        rotateX: 5,
+        boxShadow: "0 25px 50px rgba(0, 0, 0, 0.25)",
         transition: { type: "spring", stiffness: 300, damping: 30 }
+      }}
+      animate={{
+        y: [0, -3, 0],
+        rotateZ: [0, 1, -1, 0],
+      }}
+      transition={{
+        y: {
+          duration: 4 + index * 0.3,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: index * 0.2,
+        },
+        rotateZ: {
+          duration: 6 + index * 0.2,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: index * 0.1,
+        }
       }}
     >
       <motion.div

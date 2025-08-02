@@ -8,23 +8,23 @@ const Work = () => {
 
   const workImages = [
     {
-      src: "/assets/work1.jpg",
-      alt: "Modern fade haircut",
+      src: "/attached_assets/Screenshot 2025-08-02 at 12.56.21 PM_1754157527921.png",
+      alt: "Perfect fade with precision lineup",
       fallback: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500"
     },
     {
-      src: "/assets/work2.jpg",
-      alt: "Professional beard trim",
+      src: "/attached_assets/Screenshot 2025-08-02 at 12.57.15 PM_1754157527922.png",
+      alt: "Modern textured cut with beard styling",
       fallback: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500"
     },
     {
-      src: "/assets/work3.jpg",
-      alt: "Textured modern haircut",
+      src: "/attached_assets/Screenshot 2025-08-02 at 12.57.50 PM_1754157527922.png",
+      alt: "Classic taper fade with sharp lineup",
       fallback: "https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500"
     },
     {
-      src: "/assets/work4.jpg",
-      alt: "Classic gentleman's haircut",
+      src: "/attached_assets/Screenshot 2025-08-02 at 12.58.07 PM_1754157527923.png",
+      alt: "Skin fade with professional beard trim",
       fallback: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500"
     }
   ];
@@ -67,7 +67,35 @@ const Work = () => {
   };
 
   return (
-    <section id="work" className="py-24 bg-white" ref={ref}>
+    <section id="work" className="py-24 mega-gradient relative overflow-hidden" ref={ref}>
+      {/* Animated Background Shapes */}
+      <div className="absolute inset-0 opacity-10">
+        <motion.div
+          className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-gray-300 to-gray-600 rounded-full"
+          animate={{
+            scale: [1, 1.2, 1],
+            rotate: [0, 180, 360],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-20 left-20 w-24 h-24 bg-gradient-to-tr from-gray-400 to-gray-700"
+          style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}
+          animate={{
+            scale: [1, 1.3, 1],
+            rotate: [0, -120, -240, -360],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-20"
@@ -93,12 +121,30 @@ const Work = () => {
           {workImages.map((image, index) => (
             <motion.div
               key={index}
-              className="relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer"
+              className="relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer animate-morphing"
               variants={itemVariants}
               onHoverStart={() => setHoveredIndex(index)}
               onHoverEnd={() => setHoveredIndex(null)}
-              whileHover={{ y: -8 }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              whileHover={{ 
+                y: -15,
+                scale: 1.05,
+                rotateY: 10,
+                boxShadow: "0 25px 50px rgba(0, 0, 0, 0.25)",
+              }}
+              animate={{
+                y: [0, -2, 0],
+              }}
+              transition={{ 
+                type: "spring", 
+                stiffness: 300, 
+                damping: 30,
+                y: {
+                  duration: 3 + index * 0.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: index * 0.2,
+                }
+              }}
             >
               <motion.img
                 src={image.src}

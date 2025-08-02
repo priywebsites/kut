@@ -8,19 +8,6 @@ const Services = () => {
 
   const services = [
     {
-      icon: Crown,
-      title: "THE ROYAL PACKAGE",
-      price: "$85",
-      duration: "90 min",
-      features: [
-        "Custom full-service haircut",
-        "Precision beard trim with razor lineup",
-        "Hot towel treatment",
-        "Premium styling"
-      ],
-      featured: true
-    },
-    {
       icon: Scissors,
       title: "SIGNATURE CUT",
       price: "$45",
@@ -106,7 +93,31 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-24 bg-gray-50" ref={ref}>
+    <section id="services" className="py-24 ultra-gradient relative overflow-hidden" ref={ref}>
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 opacity-20">
+        {[...Array(8)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 bg-gray-400 rounded-full"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -50, 0],
+              opacity: [0, 1, 0],
+              scale: [0, 1.5, 0],
+            }}
+            transition={{
+              duration: 4 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-20"

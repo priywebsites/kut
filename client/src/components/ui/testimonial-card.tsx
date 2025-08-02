@@ -35,14 +35,35 @@ const TestimonialCard = ({
 
   return (
     <motion.div
-      className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 group cursor-pointer"
+      className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 group cursor-pointer animate-morphing"
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       whileHover={{ 
-        y: -5,
+        y: -12,
+        scale: 1.03,
+        rotateY: 3,
+        boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
         transition: { type: "spring", stiffness: 300, damping: 30 }
+      }}
+      animate={{
+        y: [0, -2, 0],
+        scale: [1, 1.01, 1],
+      }}
+      transition={{
+        y: {
+          duration: 5 + index * 0.4,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: index * 0.3,
+        },
+        scale: {
+          duration: 4 + index * 0.2,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: index * 0.5,
+        }
       }}
     >
       <motion.div

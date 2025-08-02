@@ -103,6 +103,34 @@ export default {
         "float": {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" }
+        },
+        "float-slow": {
+          "0%, 100%": { transform: "translateY(0px) rotate(0deg)" },
+          "33%": { transform: "translateY(-15px) rotate(1deg)" },
+          "66%": { transform: "translateY(-8px) rotate(-1deg)" }
+        },
+        "pulse-slow": {
+          "0%, 100%": { transform: "scale(1)", opacity: "0.7" },
+          "50%": { transform: "scale(1.05)", opacity: "1" }
+        },
+        "rotate-slow": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" }
+        },
+        "bounce-subtle": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-5px)" }
+        },
+        "gradient-shift": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" }
+        },
+        "morphing": {
+          "0%, 100%": { borderRadius: "20px", transform: "scale(1) rotate(0deg)" },
+          "25%": { borderRadius: "30px", transform: "scale(1.02) rotate(1deg)" },
+          "50%": { borderRadius: "40px", transform: "scale(1.05) rotate(0deg)" },
+          "75%": { borderRadius: "25px", transform: "scale(1.02) rotate(-1deg)" }
         }
       },
       animation: {
@@ -113,6 +141,12 @@ export default {
         "slide-right": "slide-right 0.8s ease-out forwards",
         "scale-in": "scale-in 0.6s ease-out forwards",
         "float": "float 3s ease-in-out infinite",
+        "float-slow": "float-slow 6s ease-in-out infinite",
+        "pulse-slow": "pulse-slow 4s ease-in-out infinite",
+        "rotate-slow": "rotate-slow 20s linear infinite",
+        "bounce-subtle": "bounce-subtle 2s ease-in-out infinite",
+        "gradient-shift": "gradient-shift 8s ease-in-out infinite",
+        "morphing": "morphing 6s ease-in-out infinite",
       },
       spacing: {
         '18': '4.5rem',

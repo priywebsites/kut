@@ -75,7 +75,40 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-white" ref={ref}>
+    <section id="contact" className="py-24 mega-gradient relative overflow-hidden" ref={ref}>
+      {/* Animated Contact Background */}
+      <div className="absolute inset-0 opacity-20">
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-40 h-40 bg-gradient-to-br from-gray-100 to-gray-400 rounded-full"
+          animate={{
+            scale: [1, 1.3, 1],
+            x: [0, 50, 0],
+            y: [0, -30, 0],
+            opacity: [0.1, 0.3, 0.1],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-gradient-to-tl from-gray-200 to-gray-500"
+          style={{ clipPath: "polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)" }}
+          animate={{
+            scale: [1, 0.8, 1],
+            x: [0, -40, 0],
+            y: [0, 20, 0],
+            rotate: [0, 72, 144, 216, 288, 360],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
+        />
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-20"

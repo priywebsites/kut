@@ -42,7 +42,40 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-24 bg-white" ref={ref}>
+    <section id="about" className="py-24 dynamic-gradient relative overflow-hidden" ref={ref}>
+      {/* Floating Background Elements */}
+      <div className="absolute inset-0 opacity-15">
+        <motion.div
+          className="absolute top-10 left-10 w-20 h-20 bg-gradient-to-br from-gray-200 to-gray-500 rounded-full"
+          animate={{
+            x: [0, 100, 0],
+            y: [0, -50, 0],
+            scale: [1, 1.2, 1],
+            rotate: [0, 360],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-10 right-10 w-16 h-16 bg-gradient-to-tl from-gray-300 to-gray-600"
+          style={{ clipPath: "polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)" }}
+          animate={{
+            x: [0, -80, 0],
+            y: [0, 30, 0],
+            scale: [1, 0.8, 1],
+            rotate: [0, -180, -360],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
+        />
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="grid md:grid-cols-2 gap-16 items-center"
