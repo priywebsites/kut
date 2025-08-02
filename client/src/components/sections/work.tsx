@@ -8,19 +8,19 @@ const Work = () => {
 
   const workImages = [
     {
-      src: "/images/Screenshot 2025-08-02 at 12.56.21 PM_1754157527921.png",
+      src: "./images/Screenshot 2025-08-02 at 12.56.21 PM_1754157527921.png",
       alt: "Perfect fade with precision lineup"
     },
     {
-      src: "/images/Screenshot 2025-08-02 at 12.57.15 PM_1754157527922.png",
+      src: "./images/Screenshot 2025-08-02 at 12.57.15 PM_1754157527922.png",
       alt: "Modern textured cut with beard styling"
     },
     {
-      src: "/images/Screenshot 2025-08-02 at 12.57.50 PM_1754157527922.png",
+      src: "./images/Screenshot 2025-08-02 at 12.57.50 PM_1754157527922.png",
       alt: "Classic taper fade with sharp lineup"
     },
     {
-      src: "/images/Screenshot 2025-08-02 at 12.58.07 PM_1754157527923.png",
+      src: "./images/Screenshot 2025-08-02 at 12.58.07 PM_1754157527923.png",
       alt: "Skin fade with professional beard trim"
     }
   ];
@@ -150,7 +150,6 @@ const Work = () => {
                   scale: hoveredIndex === index ? 1.1 : 1,
                 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                key={`work-image-${index}-${Date.now()}`}
               />
               
               <motion.div
