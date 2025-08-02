@@ -49,7 +49,7 @@ const Navigation = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
-            <h1 className="text-2xl font-bold text-black tracking-tight">
+            <h1 className="text-2xl font-bold bg-gradient-to-r from-black via-blue-600 to-black bg-clip-text text-transparent tracking-tight">
               KUT'N UP
             </h1>
           </motion.div>
