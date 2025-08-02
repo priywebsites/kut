@@ -1,0 +1,108 @@
+Build a cutting-edge, ultra-premium, and ultra-animated website for a high-end barbershop. The design should scream modern luxury—visually minimalist but packed with seamless animations and fluid motion. Every element, from headers to buttons to images, should feel alive and dynamic. Prioritize motion and experience, not just content.
+
+⚠️ This site MUST feel:
+
+Elite and luxurious
+
+Modern and minimalistic
+
+Smooth and immersive, with world-class animation quality
+
+💡 Use inspiration and visual cues from: https://www.kingsbarbershop.site. Match its layout, typography, and entire feel—but elevate it with even more animation polish.
+
+✅ Key Requirements:
+Vercel-ready project structure (use Next.js 14 or latest stable, and ensure it runs flawlessly with zero config on Vercel)
+
+Tailwind CSS for styling with custom configuration to limit color palette to black, white, and grayscale only
+
+Framer Motion, AOS, or GSAP for advanced page transitions, scroll-based animations, hover microinteractions, and lazy-loaded animated content
+
+Use modern, sans-serif fonts like Inter, Space Grotesk, or Satoshi—no serif fonts, no gimmicky typography
+
+Every component (text, buttons, cards, images, navigation) should feature subtle and responsive animations
+
+Use only rounded buttons with premium hover states
+
+Include three “Book Now” buttons, strategically scattered (hero, services, and sticky or footer)
+
+Fully responsive and touch-optimized; animation logic must work perfectly on mobile and tablet
+
+🧩 Page Sections:
+Hero Section
+
+High-impact animated title and background
+
+Includes a bold, animated “Book Now” button
+
+About Us
+
+Includes 1 replaceable image (/assets/about.jpg)
+
+Subtle scroll animations for text and image
+
+Services
+
+List services with icons and hover effects
+
+Use animated entry on scroll
+
+Our Work
+
+Display 4 stylized, easily swappable images (/assets/work1.jpg … work4.jpg)
+
+Use grid layout with hover animations or parallax on scroll
+
+Reviews
+
+Animated testimonial cards
+
+Subtle motion blur or entry animation
+
+Find Us
+
+Embedded Google Maps location
+
+Full business details (see below)
+
+Add a contact form (optional) with smooth field animations
+
+📍 Business Details:
+Name: Kut'n Up Barber Shop
+
+Address: 2556 Sparkman Dr NW, Huntsville, AL 35810, USA
+
+Phone: +1 (256) 468-5606
+
+Google Maps: link
+
+Hours:
+
+Tuesday–Friday: 9 a.m.–6 p.m.
+
+Saturday: 8 a.m.–5 p.m.
+
+Sunday & Monday: Closed
+
+🖼 Assets:
+Store all images in /assets/ with clean file names (e.g., about.jpg, work1.jpg–work4.jpg) for easy replacement
+
+🛠️ Tech Stack Requirements:
+Framework: Next.js 14+
+
+Styling: Tailwind CSS
+
+Animations: Framer Motion and/or AOS
+
+Hosting: Fully deployable on Vercel with zero additional configuration
+
+Add vercel.json if needed for redirects or headers
+
+🚫 Don't Include:
+Any color besides black, white, or grayscale
+
+Any serif or dated fonts
+
+Stocky or generic layout components
+
+💬 Final result: a hyper-modern, animated, luxurious, mobile-optimized, Vercel-deployable website that feels like a high-end fashion brand but for a barbershop.
+
