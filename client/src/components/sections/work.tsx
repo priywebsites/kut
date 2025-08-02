@@ -10,23 +10,23 @@ const Work = () => {
 
   const workImages = [
     {
-      src: "/Screenshot 2025-08-02 at 12.56.21 PM_1754157527921.png",
-      alt: "Perfect fade with precision lineup",
+      src: "/attached_assets/barbershop-work-1.png",
+      alt: "",
       fallback: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500"
     },
     {
-      src: "/Screenshot 2025-08-02 at 12.57.15 PM_1754157527922.png",
-      alt: "Modern textured cut with beard styling",
+      src: "/attached_assets/barbershop-work-2.png", 
+      alt: "",
       fallback: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500"
     },
     {
-      src: "/Screenshot 2025-08-02 at 12.57.50 PM_1754157527922.png",
-      alt: "Classic taper fade with sharp lineup",
+      src: "/attached_assets/barbershop-work-3.png",
+      alt: "",
       fallback: "https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500"
     },
     {
-      src: "/Screenshot 2025-08-02 at 12.58.07 PM_1754157527923.png",
-      alt: "Skin fade with professional beard trim",
+      src: "/attached_assets/barbershop-work-4.png",
+      alt: "",
       fallback: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500"
     }
   ];
@@ -168,19 +168,7 @@ const Work = () => {
                 transition={{ duration: 0.3 }}
               />
               
-              <motion.div
-                className="absolute bottom-4 left-4 right-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ 
-                  opacity: hoveredIndex === index ? 1 : 0,
-                  y: hoveredIndex === index ? 0 : 20
-                }}
-                transition={{ duration: 0.3, delay: 0.1 }}
-              >
-                <p className="text-white font-medium text-sm">
-                  {image.alt}
-                </p>
-              </motion.div>
+
 
               {/* Animated border */}
               <motion.div
