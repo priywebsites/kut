@@ -88,7 +88,7 @@ const About = () => {
             variants={imageVariants}
           >
             <img
-              src="/attached_assets/Screenshot 2025-08-02 at 1.04.01 PM_1754157889780.png"
+              src="/attached_assets/barbershop-storefront.png"
               alt=""
               className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
             />
