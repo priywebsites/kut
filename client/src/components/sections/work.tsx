@@ -8,22 +8,22 @@ const Work = () => {
 
   const workImages = [
     {
-      src: "/images/Screenshot 2025-08-02 at 12.56.21 PM_1754157527921.png",
+      src: "/images/Screenshot 2025-08-02 at 12.56.21 PM_1754157527921.png?v=" + Date.now(),
       alt: "Perfect fade with precision lineup",
       fallback: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500"
     },
     {
-      src: "/images/Screenshot 2025-08-02 at 12.57.15 PM_1754157527922.png",
+      src: "/images/Screenshot 2025-08-02 at 12.57.15 PM_1754157527922.png?v=" + Date.now(),
       alt: "Modern textured cut with beard styling",
       fallback: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500"
     },
     {
-      src: "/images/Screenshot 2025-08-02 at 12.57.50 PM_1754157527922.png",
+      src: "/images/Screenshot 2025-08-02 at 12.57.50 PM_1754157527922.png?v=" + Date.now(),
       alt: "Classic taper fade with sharp lineup",
       fallback: "https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500"
     },
     {
-      src: "/images/Screenshot 2025-08-02 at 12.58.07 PM_1754157527923.png",
+      src: "/images/Screenshot 2025-08-02 at 12.58.07 PM_1754157527923.png?v=" + Date.now(),
       alt: "Skin fade with professional beard trim",
       fallback: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500"
     }
